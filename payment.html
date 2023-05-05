@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" >
+    </head>
+       <body>
+           <!---payment-->
+           <span class="display">
+            <nav>
+                <a href="site.html"><img id="logo" src="logortc.png" alt="LOGO"></a>
+                <div class="nav-links" id="navLinks">
+                   <i class="fa fa-times" onclick="hideMenu()" ></i>
+                   <ul>                    
+                        <li><a href="site.html" >HOME</a></li>
+                        <li><a href="phpimplementation.html" >ACCOUNT</a></li>
+                        <li><a href="explore.html" >EXPLORE</a></li>
+                        <li><a href="About.html" >CONTACT US</a></li>
+                   </ul>
+                </div>
+            </nav>
+           <div class="box" >
+             <section  class="ket">
+                   <h3>Choose any payment mode</h3><br><br>
+                   <h4 id="lef">UPI</h4><br><br>
+                 <span class="links">               
+                 <ul>
+                 <li><a onclick="processing()" href="QRcode.html"><img src="gpay1.png" alt="google pay"></a></li> 
+                 <li> <a onclick="processing()" href="QRcode.html"><img src="paytm1.png" alt="paytm"></a></li>
+                  <li><a onclick="processing()" href="QRcode.html"><img src="phonepe1.png" alt="phonepe"></a></li>
+                  <li><a onclick="processing()" href="QRcode.html"><img src="paypal1.png" alt="paypal"></a></li>
+                  </ul>
+                </span><br>
+                <h4 id="lef"> Net Banking/ Credit/ Debit Card</h4><br><br>
+                <span class="links">               
+                    <ul>
+                    <li><a onclick="processing()" href="QRcode.html"><img src="net1.jpg" alt="paytm"></a></li> 
+                    <li><a onclick="processing()" href="QRcode.html"><img src="ccx.jpg" alt="paytm"></a></li> 
+                    <li><a onclick="processing()" href="QRcode.html"><img src="dc4.jpg" alt="paytm"></a></li>                
+                     </ul>
+                   </span><br>
+            </section>
+            </div>
+            </span>  
+        </body>
+        <script>
+          function processing(){
+            window.alert("Processing payment.....\r\nDonot refresh the page");
+            window.alert("Payment successful....")
+          }
+        </script>
+        </html>

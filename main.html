@@ -1,0 +1,1186 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DIGITIZED RTC</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style1.css"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+    </head>
+    </head>
+       <body>
+           <!---Take Ticket-->
+           <span class="display">
+            <nav>
+                <a href="site.html"><img id="logo" src="logortc.png" alt="LOGO"></a>
+                <div class="nav-links" id="navLinks">
+                   <i class="fa fa-times" onclick="hideMenu()" ></i>
+                   <ul>                    
+                        <li><a href="site.html" >HOME</a></li>
+                        <li><a href="phpimplementation.html" >ACCOUNT</a></li>
+                        <li><a href="explore.html" >EXPLORE</a></li>
+                        <li><a href="About.html" >CONTACT US</a></li>
+                   </ul>
+                </div>
+            </nav>
+           <div class="box" >
+             <section  class="ket">
+                <form >
+                    <h3 id="tt">Take Ticket</h3><br><br>            
+                    <label id="es" for="sou">Enter Source:</label>
+                    <input id="sou" type="text" list="stops"  placeholder="Enter here"  ><br><br><br>
+                    <label id="ed" for="des" >Enter Destination: </label>
+                    <input id="des" type="text" list="stops"  placeholder="Enter here"><br><br>
+                    <h3 id="tt2" >Ticket Fare<br></h3>
+					<div id="mon"></div>
+					<br>
+                    
+                    <button class="tk" id="sub" type="button" onclick="taketicket()">Submit</button><br>
+					<button class="tk" id="pay" type="button" onclick="location.href='payment.html'">Proceed to pay</button>
+                </form>
+
+                    <datalist id="stops">
+                        <option>Afzalgunj Bus Stop</option>
+<option>12 Road Jubilee Enclave3 AG Colony</option>
+<option>Abdullapurmet</option>
+<option>Abids Bus Stop</option>
+<option>Accountant General Office</option>
+<option>Acharya NG Ranga Agricultural University</option>
+<option>Adda Gutta</option>
+<option>Adibatla</option>
+<option>Adikmet</option>
+<option>Adraspally</option>
+<option>Agapally</option>
+<option>Aghapura</option>
+<option>AGRL Colony</option>
+<option>Ahmed Nagar</option>
+<option>Ahobhil Mutt</option>
+<option>Air Force Academy (Dundigal)</option>
+<option>Ajilapur</option>
+<option>Akanpally</option>
+<option>Akulamilaram</option>
+<option>Aliabad</option>
+<option>Aliabad (Shamirpet)</option>
+<option>Alinagar</option>
+<option>Alind</option>
+<option>Alkapuri Bus Stop</option>
+<option>Allwyn Colony Bus Stop</option>
+<option>Almasguda Bus Stop</option>
+<option>Alugadda Bhavi</option>
+<option>Alwal Bus Station</option>
+<option>Alwal Police Station</option>
+<option>Ambedkar College Stop</option>
+<option>Ambedkar Nagar (Chinthal Basthi)</option>
+<option>Ambedkar Nagar (Kapra)</option>
+<option>Amberpet Bus Station</option>
+<option>Amberpet Chowrasta Bus Stop</option>
+<option>Amdapur</option>
+<option>Amdur Solakpally Rd</option>
+<option>Ameerpet Bus Station</option>
+<option>Amuguda Bus Stop</option>
+<option>Anajpur</option>
+<option>Anand Bagh Gate</option>
+<option>Anand Theatre</option>
+<option>Anandbag Bus Stop</option>
+<option>Anantharam</option>
+<option>Ankireddipalli Bus Stop</option>
+<option>Annapurna Colony</option>
+<option>Annaram (prakruthi nivas)</option>
+<option>Anutex</option>
+<option>AOC</option>
+<option>AOC Gate</option>
+<option>APIIC colony (ZTS)</option>
+<option>Apollo Pharmacy (Madhapur)</option>
+<option>Apollo Pharmacy (Malakpet)</option>
+<option>Appa Reddy Guda</option>
+<option>Apuroopa Bus Stop</option>
+<option>Aramaisamma Tent House</option>
+<option>Aramghar (Shivarampally)</option>
+<option>Army College Of Dental Sciences</option>
+<option>Arts College MMTS</option>
+<option>Arundhathi Colony</option>
+<option>Arutla</option>
+<option>AS Rao Nagar Bus Stop</option>
+<option>Asbestas Colony Bus Stop</option>
+<option>Ashok Gardens</option>
+<option>Ashok Nagar (Kavadiguda)</option>
+<option>Ashoknagar (Lingampally)</option>
+<option>Asif Nagar Bus Stop</option>
+<option>Assembly</option>
+<option>Athwelli</option>
+<option>Attapur</option>
+<option>Aushapur</option>
+<option>Aushapur Railway Gate</option>
+<option>Aware Global Hospital</option>
+<option>Azampura</option>
+<option>Aziz Nagar</option>
+<option>Azzinatanda</option>
+<option>B Pally (Gopalpuram)</option>
+<option>Baba Nagar</option>
+<option>Babika Chasma (Charminar)</option>
+<option>Bacharam</option>
+<option>Bachupally</option>
+<option>Bada Bazar</option>
+<option>Badangpet Bus Stop</option>
+<option>Badichowdi</option>
+<option>Baghlingampally</option>
+<option>Bahadurpally</option>
+<option>Bakaram</option>
+<option>Balaji Nagar bus stop (Balaji Nagar)</option>
+<option>Balanagar Bus Stop</option>
+<option>Balapur</option>
+<option>Balapur X roads</option>
+<option>Balijaguda</option>
+<option>Balkampet</option>
+<option>Bandavirala</option>
+<option>Bandlaguda</option>
+<option>Bandlaguda (Chandrayanagutta)</option>
+<option>Bandlaguda (Nagaram)</option>
+<option>Bandlaguda (Nagole)</option>
+<option>Banjara Hills</option>
+<option>Bank Colony (Qutubullapur)</option>
+<option>Bank Colony (saket)</option>
+<option>Bank Street</option>
+<option>Bapu Ghat</option>
+<option>Bapu Nagar</option>
+<option>Bapuji Nagar (Bowenpally) Bus Stop</option>
+<option>Barkas</option>
+<option>Barkatpura</option>
+<option>Bashamoniguda</option>
+<option>Basheerbagh</option>
+<option>Bata (RP Road)</option>
+<option>Batala Cheruvu</option>
+<option>Batasingaram</option>
+<option>Bavanicly</option>
+<option>Bazar Ghat</option>
+<option>Beeramguda</option>
+<option>Beerban Bagh (Asif Nagar)</option>
+<option>Begumpet Railway Station</option>
+<option>Bella colony</option>
+<option>Bhagya Nagar Colony (Uppal)</option>
+<option>Bhagyalatha</option>
+<option>Bhanoor</option>
+<option>Bharat Nagar (Moosapet) Bus Stop</option>
+<option>Bharat Nagar Colony (AS Rao Nagar) Bus Stop</option>
+<option>Bhavani Nagar</option>
+<option>BHEL</option>
+<option>BHEL Hospital</option>
+<option>Bhoiguda</option>
+<option>Bhola Shankar Maktha</option>
+<option>Bholakpur (Boiguda)</option>
+<option>Bhongir Bus Stop</option>
+<option>Bhudevi Nagar</option>
+<option>Bhupesh Guptha Colony</option>
+<option>Bibi Cancer Hospital</option>
+<option>Bibinagar</option>
+<option>Bible House</option>
+<option>Birla Mandir</option>
+<option>Bismillah colony</option>
+<option>Bits Pilani</option>
+<option>Bldg blocks</option>
+<option>Blue Moon (Panjagutta)</option>
+<option>BN Reddy Nagar Bus Stop</option>
+<option>BoatsClub (RP Road)</option>
+<option>Boduppal</option>
+<option>Boduppal kaman</option>
+<option>Bogaram Bus Stop</option>
+<option>Bolarum Bus Station</option>
+<option>Bommalaramaram</option>
+<option>Bommidala</option>
+<option>Bonthapally</option>
+<option>Borabanda Bus Stop</option>
+<option>Botiguda</option>
+<option>Boudha Nagar (Arts College)</option>
+<option>Bowrampet</option>
+<option>Brahmanpally</option>
+<option>Brindavan Colony (HS Darga)</option>
+<option>Budvel</option>
+<option>Bulkapur</option>
+<option>Bushrath Nagar</option>
+<option>Cable X Road</option>
+<option>Canaranagar</option>
+<option>CBS Bus Stop</option>
+<option>CBIT Bus Stop</option>
+<option>CCMB</option>
+<option>Center Point</option>
+<option>Central School</option>
+<option>Chaderghat Bus Stop</option>
+<option>Chaitanyapuri</option>
+<option>Chakri puram colony</option>
+<option>Champapet</option>
+<option>Chanchalguda</option>
+<option>Chanda Nagar</option>
+<option>Chandkhanguda</option>
+<option>Chandragiri Nagar</option>
+<option>Chandrayanagutta</option>
+<option>Chandulal Baradari</option>
+<option>Char Kaman</option>
+<option>Charminar Bus Stop</option>
+<option>Chatrinaka Police Station</option>
+<option>Chatta Bazaar</option>
+<option>Cheededu</option>
+<option>Chengi Cherla</option>
+<option>Cherlapally Bus Stop</option>
+<option>Cherlapally Central Jail</option>
+<option>Chikatimamidi</option>
+<option>Chikkadpally</option>
+<option>Chilakalguda (Gandhi Statue)</option>
+<option>Chilkanagar Bus Stop</option>
+<option>Chilkur Balaji Temple</option>
+<option>China kanjarla</option>
+<option>Chinaravulapally</option>
+<option>Chinna Cherlapally</option>
+<option>Chinnamangalaram</option>
+<option>Chinnathokata</option>
+<option>Chintal Basthi</option>
+<option>Chintal Bus station</option>
+<option>Chintalakunta</option>
+<option>Chintalmet</option>
+<option>Chintapatla</option>
+<option>Chintulla</option>
+<option>Chippalapally</option>
+<option>Chiriyala</option>
+<option>Chittapur</option>
+<option>Chotuppal</option>
+<option>Chudi bazaar</option>
+<option>Church Bus Stop (Ramanthapur)</option>
+<option>Church Colony</option>
+<option>City College</option>
+<option>City Criminal Court</option>
+<option>Clock Tower</option>
+<option>CMR College of Engineering and Technology</option>
+<option>CRPF</option>
+<option>Cyber Gateway Bus Stop</option>
+<option>Dabbadaguda</option>
+<option>Dabeerpura</option>
+<option>Dabilpur</option>
+<option>Dacharam</option>
+<option>Dairy Form (Rajendra Nagar)</option>
+<option>Dammaiguda (lake)</option>
+<option>Danama Jhopdi Bus Stop</option>
+<option>Dandumailaram</option>
+<option>Darugula</option>
+<option>Darulshifa</option>
+<option>Darus Salam</option>
+<option>Dasrlapally</option>
+<option>Datpally</option>
+<option>Dayanand Nagar</option>
+<option>Dayara</option>
+<option>DBR Mills</option>
+<option>Deepthisree</option>
+<option>Defence Colony</option>
+<option>Deshmukhi</option>
+<option>Devarayamzal</option>
+<option>Dharmaram</option>
+<option>Dhoolpet</option>
+<option>Diamond Point</option>
+<option>Dilsukhnagar Bus station</option>
+<option>Domalguda</option>
+<option>Doodh Bowli</option>
+<option>Doulatabad</option>
+<option>Dubai Gate</option>
+<option>Dulapally</option>
+<option>Dundigal Airbase</option>
+<option>Dundigal X road</option>
+<option>Durga Estate</option>
+<option>East Anand Bagh</option>
+<option>East Bahadurpura</option>
+<option>East Marredpally</option>
+<option>Easwaripuri</option>
+<option>EC Nagar</option>
+<option>ECIL Bus Stop</option>
+<option>Edulabad Lake</option>
+<option>Electric Junction</option>
+<option>Elgapally Tanda</option>
+<option>EME Centre Bus Stop</option>
+<option>Engine bowli</option>
+<option>Enkiryal</option>
+<option>Erragadda</option>
+<option>Erramanzil Bus Stop</option>
+<option>ESI Bus Stop</option>
+<option>Fakeerguda</option>
+<option>Falaknuma</option>
+<option>Falaknuma Railway Station</option>
+<option>Family Qtrs</option>
+<option>Fateh Darwaza</option>
+<option>Fathenagar</option>
+<option>FCI Colony</option>
+<option>Ferozeguda</option>
+<option>Ferzajiguda</option>
+<option>Fever Hospital</option>
+<option>Film Nagar</option>
+<option>G Madanna Gudem</option>
+<option>G pally</option>
+<option>Gachibowli Bus Station</option>
+<option>Gaddamallaiguda</option>
+<option>Gaganpahad</option>
+<option>Gagillapur</option>
+<option>Gajularamaram</option>
+<option>Galaxy</option>
+<option>Gandhi Bhavan Bus Stop</option>
+<option>Gandhi Hospital</option>
+<option>Gandhi Nagar (kapra)</option>
+<option>Gandhi Nagar (Kavadiguda) Bus Stop</option>
+<option>Gandhi Nagar Bus Stop</option>
+<option>Gandhi Statue</option>
+<option>Gandi Cheruvu Bus Stop</option>
+<option>Gandi Maisamma</option>
+<option>Gandipet</option>
+<option>Ganesh Nagar</option>
+<option>Ganesh Temple</option>
+<option>Ganeshpuri Colony</option>
+<option>Ganga Nagar</option>
+<option>Gangaputra Colony Bus Stop</option>
+<option>Gangaram</option>
+<option>Gautam Nagar water tank</option>
+<option>Gayatri Hills</option>
+<option>Gayatri Nagar</option>
+<option>Geological Survey of India</option>
+<option>Ghanpur Bus Stop</option>
+<option>Ghatkesar Bus Stop</option>
+<option>Ghattuppal</option>
+<option>GHouse Nagar</option>
+<option>Giri Nagar</option>
+<option>Girmapur</option>
+<option>Gokhle Nagar</option>
+<option>Golconda Hotel</option>
+<option>Golconda X Roads</option>
+<option>Golkonda Bus Stop</option>
+<option>Gollapally</option>
+<option>Golnaka</option>
+<option>Gomaram</option>
+<option>Gopalapuram</option>
+<option>Gopularam</option>
+<option>Gosha Mahal</option>
+<option>Gowdavalli</option>
+<option>Gowliguda</option>
+<option>Gowlipura</option>
+<option>Gowrelly</option>
+<option>GPFA QTRS</option>
+<option>GPO (Abids)</option>
+<option>GPRA QTRS</option>
+<option>Green Field Colony</option>
+<option>Greenlands</option>
+<option>GTS Colony</option>
+<option>Guduru village</option>
+<option>Guldharwaja</option>
+<option>Gulshan Function Hall</option>
+<option>Gulshan-E-Iqbal Colony</option>
+<option>Gulzar Nagar</option>
+<option>Gummadidala</option>
+<option>Gundla</option>
+<option>Gungal</option>
+<option>Gunrock</option>
+<option>Gurramaguda</option>
+<option>Gymkhana Grounds</option>
+<option>Habsiguda Bus Stop</option>
+<option>Hafeezpet Bus Stop</option>
+<option>Hafiz Baba Nagar</option>
+<option>Hajipur</option>
+<option>Hakimpet</option>
+<option>Hakimpet Airbase</option>
+<option>HAL Colony</option>
+<option>HAL Colony (Old Bowenpally)</option>
+<option>Hanuman Temple (AS Rao Nagar)</option>
+<option>Hanuman Temple (Narsingi)</option>
+<option>Hanuman Temple (Tirumulgherry)</option>
+<option>Hanumanpet</option>
+<option>Happy Home</option>
+<option>Hari Puri Colony Park</option>
+<option>Harshaguda</option>
+<option>Hasmatpet</option>
+<option>Hasnabad</option>
+<option>Hastinapuram</option>
+<option>Hatnura</option>
+<option>Hayath Nagar Bus Stop</option>
+<option>HB Colony</option>
+<option>HB Colony Phase-1 Bus Stop</option>
+<option>HCL Colony</option>
+<option>HCU</option>
+<option>HCU Campus</option>
+<option>Hema Nagar</option>
+<option>High Court (Post Office)</option>
+<option>High Court Colony Bus Stop</option>
+<option>Himayat Sagar Road</option>
+<option>Himayath Nagar</option>
+<option>Hitech City Bus Stop</option>
+<option>Hitech City MMTS Station</option>
+<option>HMT colony</option>
+<option>HMT Hills Colony</option>
+<option>HPS</option>
+<option>HS Dargha</option>
+<option>Huda Colony (Lingampalli)</option>
+<option>Huda colony Bus Stop</option>
+<option>HUDA Complex</option>
+<option>Hussaini Alam</option>
+<option>Hyderaguda Bus Stop</option>
+<option>Hyderguda Bus Stop</option>
+<option>Hydernagar</option>
+<option>Hydershakote</option>
+<option>Ibrahimpatnam Bus Station</option>
+<option>IDA</option>
+<option>IDPL Bus Stop</option>
+<option>Indira Gruhakalph Colony</option>
+<option>Indira Nagar</option>
+<option>Indira Nagar (Subhash Nagar)</option>
+<option>Indira Park</option>
+<option>INDL Estate (Moula Ali)</option>
+<option>Indra Reddy Nagar (Sivarampalli)</option>
+<option>Indresam</option>
+<option>Industrial Estate manufacturers</option>
+<option>Injapure</option>
+<option>IS Sadan Complex</option>
+<option>Isnapur-Indira Karan Rd</option>
+<option>Ivy League Academy</option>
+<option>Jagadgiri Gutta Bus Stop</option>
+<option>Jagapathi Hills</option>
+<option>Jaheer Nagar</option>
+<option>Jail Garden</option>
+<option>Jainapally</option>
+<option>Jalapalli</option>
+<option>Jamal Colony</option>
+<option>James Street</option>
+<option>Jamia Osmania Bus Stop</option>
+<option>Jamilapet</option>
+<option>Jana Prakash Narayan Nagar</option>
+<option>Jana Priya West City</option>
+<option>Janapriya Colony Bus Stop</option>
+<option>Jangampet</option>
+<option>Japal</option>
+<option>Jawahar Nagar</option>
+<option>Jayapuri Colony</option>
+<option>JBS Bus Stop</option>
+<option>Jeedimetla (Ghatkesar)</option>
+<option>Jeedimetla Bus Stop</option>
+<option>Jeedimetla Sub-Station</option>
+<option>Jhothi Nagar</option>
+<option>Jinkalwada</option>
+<option>Jinnaram</option>
+<option>Jiyapally</option>
+<option>JJ Nagar Colony</option>
+<option>JNTU (Kukatpally) Bus Stop</option>
+<option>JNTU (MasabTank)</option>
+<option>Joshi Wadi</option>
+<option>Jothi Nagar</option>
+<option>JP Durgah</option>
+<option>Jubilee Checkpost Bus Stop</option>
+<option>Jubilee Hills</option>
+<option>Jukal</option>
+<option>Juloor</option>
+<option>Jummerat Bazar</option>
+<option>Jyothi Nagar Bus Station</option>
+<option>Kabutar Khana</option>
+<option>Kachiguda Bus Stop</option>
+<option>Kachiguda Railway Station</option>
+<option>Kakatiya Nagar (Habsiguda)</option>
+<option>Kakatiya Nagar (Sainikpuri)</option>
+<option>Kalimandir</option>
+<option>Kallakal</option>
+<option>Kalpana</option>
+<option>Kalwakurthy Bus Stop</option>
+<option>Kalyan Nagar</option>
+<option>Kalyanpuri</option>
+<option>Kaman (Syed Nagar)</option>
+<option>Kamineni Hospital</option>
+<option>Kanakamamidi</option>
+<option>Kanapur</option>
+<option>Kandada</option>
+<option>Kandiguda</option>
+<option>Kandlakoya</option>
+<option>Kandukur</option>
+<option>Kandukur X Roads</option>
+<option>Kanukunta</option>
+<option>Kapol X roads</option>
+<option>Kappad</option>
+<option>Kapra</option>
+<option>Karanamguda</option>
+<option>Kardanur</option>
+<option>Karmanghat Bus Stop</option>
+<option>Karmika Nagar</option>
+<option>Karvan</option>
+<option>Katedan Industrial Area</option>
+<option>Kavadiguda</option>
+<option>Kavaguda</option>
+<option>Kavvadipally</option>
+<option>Kazipally</option>
+<option>Keerthimahal</option>
+<option>Keesara Bus Stop</option>
+<option>Keesara guta</option>
+<option>Kesaram</option>
+<option>Kesari Hanuman Temple</option>
+<option>Kesav Giri</option>
+<option>Keshavaram</option>
+<option>Keshavpur</option>
+<option>KethiReedy Pally</option>
+<option>Khagazghat</option>
+<option>Khairatabad Bus Stop</option>
+<option>Khaja Guda</option>
+<option>Kharkhana Bus Stop</option>
+<option>Khilwat</option>
+<option>King Koti</option>
+<option>Kishan Bagh</option>
+<option>Kismatpura</option>
+<option>Kistapur</option>
+<option>KK nagar</option>
+<option>KLR Nagar</option>
+<option>Kodakanchi</option>
+<option>Koheda</option>
+<option>Koheda Village</option>
+<option>Kokapeta Lake</option>
+<option>Kollapadakal</option>
+<option>Kollur Bus Stop</option>
+<option>Kolthur</option>
+<option>Kompally Bus Stop</option>
+<option>Kondakal</option>
+<option>Kondamadugu</option>
+<option>Kondapur (Ghatkesar)</option>
+<option>Kondapur Bus Stop</option>
+<option>Kongara Kalan</option>
+<option>Korantee</option>
+<option>Korremmula</option>
+<option>Kothaguda Bus Stop (Hitech City Rd)</option>
+<option>Kothagudem</option>
+<option>Kothapalli</option>
+<option>Kothapet Bus Stop</option>
+<option>Kothapet(Barkas)</option>
+<option>Kothewalguda</option>
+<option>Kothur</option>
+<option>Koti Bus Stop</option>
+<option>Kotla Ali Jah</option>
+<option>Kowkur</option>
+<option>Kowkur X Roads</option>
+<option>KPHB Colony Bus Stop</option>
+<option>KPHB Colony MIG</option>
+<option>KPHB Colony Phase-1</option>
+<option>KPHB IVth phase</option>
+<option>Krishna nagar</option>
+<option>Krupa Complex</option>
+<option>Kudaspally</option>
+<option>Kukatpally Bus Stop</option>
+<option>Kuntloor</option>
+<option>Kurmaguda</option>
+<option>Kurmalguda</option>
+<option>Kushaiguda</option>
+<option>Kushaiguda Bus Depot</option>
+<option>Kyasaram</option>
+<option>Lab Quarters Main Bus Stop</option>
+<option>Ladies Hostel</option>
+<option>Laemuru village</option>
+<option>Lakdawala</option>
+<option>Lakdikapool Bus Stop</option>
+<option>Lal Bazar Bus Stop</option>
+<option>Lal Darwaza</option>
+<option>Lalaguda Bus Stop</option>
+<option>Lalapet</option>
+<option>Lalbungalow</option>
+<option>Lalitha Bagh</option>
+<option>Langar House Bus Stop</option>
+<option>Latha Talkies</option>
+<option>Law College</option>
+<option>Laxmapur</option>
+<option>Laxmi Nagar (Mehdipatnam)</option>
+<option>Laxmi Nagar (Sainathpuram)</option>
+<option>Laxmi Starch</option>
+<option>Laxmiguda</option>
+<option>Laxminarayana Colony</option>
+<option>Laxmitanda</option>
+<option>LB Nagar Bus Stop</option>
+<option>LB Stadium</option>
+<option>Lecturers Colony</option>
+<option>Lenin Nagar</option>
+<option>Liberty Bus Stop</option>
+<option>LIG Colony</option>
+<option>Lingampally Bus Stop</option>
+<option>Lingapur</option>
+<option>Lothkunta Bus Stop</option>
+<option>Loyapalli</option>
+<option>Loyola Academy</option>
+<option>LP gudem</option>
+<option>LV Prasad Bus Stop</option>
+<option>Madapati Hanumantha School</option>
+<option>Madaram</option>
+<option>Madhapur Bus Stop</option>
+<option>Madhuban colony</option>
+<option>Madhura Nagar Colony</option>
+<option>Madina Market</option>
+<option>Mahaboob College</option>
+<option>Mahavir Hospital</option>
+<option>Mahesh Nagar</option>
+<option>Maheshwaram</option>
+<option>Majeedpur</option>
+<option>Makki Darwaja</option>
+<option>Malagudem</option>
+<option>Malakpet</option>
+<option>Malasia Township</option>
+<option>Malkajgiri Bus Stop</option>
+<option>Malkapur</option>
+<option>Malkaram Bus Stop</option>
+<option>Mall</option>
+<option>Malla Reddy Engineering College</option>
+<option>Mallampet</option>
+<option>Mallapally Mask</option>
+<option>Mallapur (Annapurna Colony)</option>
+<option>Mallapur (shamshabad)</option>
+<option>Mallepally</option>
+<option>Mallikharjun Nagar</option>
+<option>Mamidipally</option>
+<option>Manchal</option>
+<option>Mandal Office (Patancheru)</option>
+<option>Mangalghat</option>
+<option>Mangalpally</option>
+<option>Manikonda Quaters Bus Stop</option>
+<option>Manikyamma Colony</option>
+<option>Mannyaguda</option>
+<option>Mansoorabad</option>
+<option>Manyaguda</option>
+<option>Marriguda</option>
+<option>Marripally</option>
+<option>Maruthi Nagar (AS Rao Nagar)</option>
+<option>Maruthi Nagar (Kothapet)</option>
+<option>Masab Tank Bus Stop</option>
+<option>MB Darga</option>
+<option>MC Pally</option>
+<option>MD Lines</option>
+<option>Medchal</option>
+<option>Medipally</option>
+<option>Meerkhanpet</option>
+<option>Meerpet</option>
+<option>Mehdipatnam Bus Stop</option>
+<option>Mekaguda</option>
+<option>Mess</option>
+<option>Mettuguda Bus Stop</option>
+<option>MG Nagar</option>
+<option>MGBS Bus Stop</option>
+<option>Midhani</option>
+<option>Milan</option>
+<option>Military Canteen (AOC)</option>
+<option>Military Dairy Farm</option>
+<option>Mindspace</option>
+<option>Mirzalguda</option>
+<option>Misri Gunj</option>
+<option>Miyapur Bus Stop</option>
+<option>Miyapur X Roads</option>
+<option>MLA Colony Bus Stop</option>
+<option>MM kunta</option>
+<option>Moghalpura</option>
+<option>Mohan Nagar</option>
+<option>Moinabad</option>
+<option>Mokilla</option>
+<option>Mondigowrelly</option>
+<option>Moosapet Bus Stop</option>
+<option>Mosarambagh</option>
+<option>Mothukulapalli</option>
+<option>Moti Darwaza</option>
+<option>Moti Nagar</option>
+<option>Moula Ali</option>
+<option>Mozamjahi Market</option>
+<option>MRO office</option>
+<option>Muchintala</option>
+<option>Mudfort</option>
+<option>Mudwin</option>
+<option>Muknur</option>
+<option>Musheerabad Bus Stop</option>
+<option>Mustafa Nagar</option>
+<option>Muthangi</option>
+<option>Mysamma</option>
+<option>Mysireddypalli</option>
+<option>Mytrivanam</option>
+<option>NAARM</option>
+<option>Nacharam</option>
+<option>Nacharam Industrial Area</option>
+<option>Nadargul</option>
+<option>Nag Mandir</option>
+<option>Nagaram (Shamshabad)</option>
+<option>Nagaram Bus Stop</option>
+<option>Nagarjun nagar colony</option>
+<option>Nagarjuna Sagar Road</option>
+<option>Nagireddy Palli</option>
+<option>Nagole Bus Stop</option>
+<option>Nagulapally</option>
+<option>Nagulur</option>
+<option>Nainampally</option>
+<option>Nakkalapally</option>
+<option>Nalagandla</option>
+<option>Nalgonda X Roads Bus Stop</option>
+<option>Nallakunta Bus Stop</option>
+<option>Namala Gundu</option>
+<option>Nampally</option>
+<option>Nanajipur</option>
+<option>Nanaknagar</option>
+<option>Nanakramguda</option>
+<option>Nanalnagar Bus Stop</option>
+<option>Nandi Musalai Guda</option>
+<option>Nandi Nagar Bus Stop</option>
+<option>Nandigama</option>
+<option>Narapally</option>
+<option>Narayanguda</option>
+<option>Narayanpur</option>
+<option>Narsapur</option>
+<option>Narsingi Bus Stop</option>
+<option>Narsingi Lake</option>
+<option>Nawab Saheb Kunta</option>
+<option>NBT Nagar (Banjara Hills)</option>
+<option>NCC</option>
+<option>Necklace Rd</option>
+<option>Neknampur</option>
+<option>Nemuragomla</option>
+<option>Neredemet PS</option>
+<option>Neredmet Old Police Station</option>
+<option>Neredmet X Road Bus Stop</option>
+<option>Nerrapally</option>
+<option>New Bowenpally Bus Stop</option>
+<option>New Bridge</option>
+<option>New Gayathri Nagar Colony Bus Stop</option>
+<option>New Maruthi Nagar</option>
+<option>New Science College</option>
+<option>NFC (ECIL)</option>
+<option>NFC Nagar</option>
+<option>NGOs Colony Bus Stop</option>
+<option>NGRI</option>
+<option>NGRI 1st Gate</option>
+<option>NIMS (Nizam Hospital)</option>
+<option>Nirmal nagar Bus Stop</option>
+<option>Nizam College</option>
+<option>Nizampet</option>
+<option>Nizampet X Roads</option>
+<option>NMDC (Moula Ali)</option>
+<option>NMDC Bus Stop</option>
+<option>North Kamalanagar</option>
+<option>NPPTI</option>
+<option>NRM College</option>
+<option>NTR Gardens</option>
+<option>NTR Nagar (LB Nagar)</option>
+<option>NTR Stadium Bus Stop</option>
+<option>Nutankal</option>
+<option>Ocean Park (Water Park)</option>
+<option>Old Alwal (IG Statue) Bus Stop</option>
+<option>Old Bowenpally Bus Stop</option>
+<option>Old Dairy Form</option>
+<option>Old MLA Qtrs</option>
+<option>Old Safilguda</option>
+<option>Ootla</option>
+<option>Ordnance Factory</option>
+<option>Osman sagar Road</option>
+<option>Osmangunj</option>
+<option>Osmania Hospital (OGH)</option>
+<option>Osmania Medical College</option>
+<option>Osmania University (Campus)</option>
+<option>Osmanpura Colony</option>
+<option>OU Colony Bus Stop</option>
+<option>OU Engineering College</option>
+<option>P and T Colony</option>
+<option>Padmalaya Studio</option>
+<option>Padmarao Nagar</option>
+<option>Padmashali Colony</option>
+<option>Pahadi Shareef</option>
+<option>Panama Godown</option>
+<option>Panduranga Nagar</option>
+<option>Panjagutta Bus Stop</option>
+<option>Panyal/Konyal</option>
+<option>Papi Reddy Nagar</option>
+<option>Paradise Bus Stop</option>
+<option>Parsigutta</option>
+<option>Parwathapur</option>
+<option>Pasumamula</option>
+<option>Patancheru Bus Stop</option>
+<option>Patel Nagar (Amberpet)</option>
+<option>Patel Nagar (Gowlipura)</option>
+<option>Patelguda</option>
+<option>Pathar Gatti</option>
+<option>Patigadda Bus Stop</option>
+<option>Patny</option>
+<option>PC tanda</option>
+<option>Peddamangalaram</option>
+<option>Peddamma Gudi</option>
+<option>Peddatundla</option>
+<option>Pension Office (Masabtank) Bus Stop</option>
+<option>Phisalbanda</option>
+<option>Phool Bagh</option>
+<option>Piglipuram</option>
+<option>Pillaipalli</option>
+<option>Pochampally</option>
+<option>Pocharam Village Main Rd</option>
+<option>Police Lines-Begumpet Bus Stop</option>
+<option>Police Station (Malkajgiri)</option>
+<option>polkampally</option>
+<option>Ponnala Satyanarayana and Sons</option>
+<option>Porandla</option>
+<option>PostOffice (HimyatNagar)</option>
+<option>Pragathi Nagar Bus Stop</option>
+<option>Prajay Sai Gardens</option>
+<option>Prakash Nagar Bus Stop</option>
+<option>Prasanth Nagar (Moula Ali)</option>
+<option>Prashanthi Nagar</option>
+<option>Pratapsingaram</option>
+<option>Press (Saidabad)</option>
+<option>Public Gardens (Nampally)</option>
+<option>Pudur</option>
+<option>Puppalaguda</option>
+<option>Puranapool Bus Stop</option>
+<option>Putlibowli</option>
+<option>Qazipura</option>
+<option>Quba Colony</option>
+<option>Qutub Shahi Tombs (Tolichowki)</option>
+<option>Qutubullapur</option>
+<option>Race Course</option>
+<option>Rachalooru</option>
+<option>Radhika Theatre</option>
+<option>Rahmath Nagar Bus Stop</option>
+<option>Raidurgam</option>
+<option>Rail Nilayam</option>
+<option>Railapur</option>
+<option>Railway Crossing</option>
+<option>Railway Degree College</option>
+<option>Railway Quarters Moulali</option>
+<option>Raj Bhavan</option>
+<option>Raja Delux</option>
+<option>Rajanna Bai</option>
+<option>Rajeev Nagar</option>
+<option>Rajendra Nagar Bus Depot Bus Stop</option>
+<option>Rajiv Gandhi International Airport (Shamshabad)</option>
+<option>Rajiv Gruhakalpa Colony</option>
+<option>Rajpal Nagar</option>
+<option>Raju Colony (Ferozeguda)</option>
+<option>Ram Koti</option>
+<option>Ram Lingampally</option>
+<option>Ram Nagar</option>
+<option>Ram Nagar Gundu</option>
+<option>Ram Theater</option>
+<option>RamaKrishna</option>
+<option>Ramakrishna Puram Railway Station</option>
+<option>Ramakrishnapuram (Kothapet)</option>
+<option>Ramakrishnapuram X Roads (AOC)</option>
+<option>Ramanthapur colony Bus Stop</option>
+<option>Ramdaspally</option>
+<option>Ramdev Guda</option>
+<option>Ramnas Pura</option>
+<option>Ramoji Film City</option>
+<option>Rampally X Roads</option>
+<option>Ranga reddy nagar</option>
+<option>Ranganaguda</option>
+<option>Ranganatha Nagar</option>
+<option>Rangapur</option>
+<option>Ranigunj Bus Stop</option>
+<option>Ravalkol thanda</option>
+<option>Raviryal</option>
+<option>RBT</option>
+<option>RC Puram Mandal Office</option>
+<option>Reddy College</option>
+<option>Reddy Gudem</option>
+<option>Rethibowli</option>
+<option>Revenue Board Colony</option>
+<option>Rhodamisri Nagar</option>
+<option>Rice Mill (Shamshabad)</option>
+<option>Risala Bazar</option>
+<option>Riyasat Nagar</option>
+<option>RK Nagar</option>
+<option>Rly Bridge</option>
+<option>RN Reddy Colony</option>
+<option>Road No 1</option>
+<option>Road no 2</option>
+<option>Road no 7</option>
+<option>RP Road</option>
+<option>RPF</option>
+<option>RSI Club</option>
+<option>RTC Colony (Hayathnagar) Bus Stop</option>
+<option>RTC Colony (Moula ali)</option>
+<option>RTC Colony (Ramanthapur)</option>
+<option>RTC Colony (Subash nagar)</option>
+<option>RTC Cross Rd</option>
+<option>Rythu Bazar (Alwal)</option>
+<option>Safilguda Bus Stop</option>
+<option>Sagar Housing Complex</option>
+<option>Sahara Bus Stop</option>
+<option>Saheb Nagar (Vanasthalipuram)</option>
+<option>Sai baba Temple (AS Rao Nagar)</option>
+<option>Sai Nagar (Bala Nagar)</option>
+<option>Sai Nagar (kapra)</option>
+<option>Sai Nagar Colony (Balapur)</option>
+<option>Sai Ram Nagar (Langar House)</option>
+<option>Sai Ram Theatre</option>
+<option>Saibaba Nagar (Jeedimetla)</option>
+<option>Saidabad Bus Stop</option>
+<option>Sainathpuram Bus Stop</option>
+<option>Saipuri Colony</option>
+<option>Saireaddyguda Bus Stop</option>
+<option>Saket (Kapra)</option>
+<option>Salar jung Museum (Darulshifa)</option>
+<option>Salarjung Colony</option>
+<option>Saleem Nagar</option>
+<option>Saleheen Colony</option>
+<option>Sampoorna Theater</option>
+<option>Sanath Nagar Bus Stop</option>
+<option>Sangeeth</option>
+<option>Sanghi Nagar</option>
+<option>Sanikpuri Bus Stop</option>
+<option>Santhosh Nagar Bus Stand</option>
+<option>Santoshi Matha Colony</option>
+<option>Sapthagiri Theater</option>
+<option>Sarikonda</option>
+<option>Sarojini Bus Stop</option>
+<option>Saroor Nagar Bus Terminal</option>
+<option>Sastripuram Colony</option>
+<option>Satharai</option>
+<option>Sathyanarayana Colony</option>
+<option>Sathyasai school</option>
+<option>Satyanagar Bus Stop</option>
+<option>SBI Colony (Kothapet)</option>
+<option>Secretariat Bus Stop</option>
+<option>Secunderabad Junction</option>
+<option>Shah ali banda New Bus Stop</option>
+<option>Shaheen Nagar Bus Stop</option>
+<option>Shaikpet Darga Bus Stop</option>
+<option>Shaikpet Nala</option>
+<option>Shakti Sai Nagar (Mallapur)</option>
+<option>Shama</option>
+<option>Shamirpet</option>
+<option>Shamshabad Bus Stop</option>
+<option>Shamshiguda</option>
+<option>Shankar Mutt</option>
+<option>Shankerpally</option>
+<option>Shanti Nagar (Lalapet)</option>
+<option>Shanti Nagar (Vanasthalipuram)</option>
+<option>Shapur Nagar Bus Stop</option>
+<option>Sharada (Officers Colony)</option>
+<option>Sharada Nagar Bus Stop</option>
+<option>Sheeshamahal</option>
+<option>Shenoy Nursing Home</option>
+<option>Sheriguda</option>
+<option>Sherlingampally</option>
+<option>Shilparamam parking (Hitech City)</option>
+<option>Shivam</option>
+<option>Shivanagar</option>
+<option>Shivannaguda</option>
+<option>Shobana</option>
+<option>Shoppers Stop</option>
+<option>Shopping Centre (Sainikpuri)</option>
+<option>Shyamlal Building</option>
+<option>Siddapur</option>
+<option>SIFCO</option>
+<option>Sikh Village Rd</option>
+<option>Sikindlapur</option>
+<option>Singaram</option>
+<option>Sita Homes Colony</option>
+<option>Sitafalmandi MMTS</option>
+<option>Sitaram Bagh Bus Stop</option>
+<option>Sithamrai</option>
+<option>Sivaji Colony</option>
+<option>Sivarampalli</option>
+<option>Skandagiri</option>
+<option>Snehapuri Colony Bus Stop</option>
+<option>Sohail Hotel</option>
+<option>Solipet</option>
+<option>Somajiguda</option>
+<option>Somaram</option>
+<option>South End Park</option>
+<option>South Kamalanagar</option>
+<option>SP Nagar</option>
+<option>SR Nagar</option>
+<option>Sri Nagar colony</option>
+<option>Sri Ram Nagar (Chintal)</option>
+<option>Sri Ram Nagar Colony (kapra)</option>
+<option>Sri Sai Nagar Lake</option>
+<option>Sri Venkateshwara Colony</option>
+<option>Sridevi Nursing Home</option>
+<option>Srinivas Nagar Bus Stop</option>
+<option>Sripuram Colony Stop</option>
+<option>Sriramana Colony</option>
+<option>Srirangavaram</option>
+<option>State Archieves</option>
+<option>State Home</option>
+<option>Street no 8 Bus Stop</option>
+<option>Subhadra Nagar (Vanasthalipuram)</option>
+<option>Subhash Nagar (Alwal)</option>
+<option>Subhash Nagar (Jeedimetla)</option>
+<option>Suchitra Bus Stop</option>
+<option>Sudha Nagar Colony</option>
+<option>Sultan Ali Bagh</option>
+<option>Sultan Bazar</option>
+<option>Sultanpally</option>
+<option>Sumithra Nagar</option>
+<option>Suncity</option>
+<option>Super Bazar</option>
+<option>Suraram</option>
+<option>Suraram X Road</option>
+<option>Suresh Talkies</option>
+<option>Survey Of India</option>
+<option>Surya Nagar (Alwal)</option>
+<option>Sushma Theater</option>
+<option>Sutariguda</option>
+<option>Swaraj Nagar</option>
+<option>Syed Aliguda</option>
+<option>Syed Nagar</option>
+<option>Syndicate Bank (Shivam)</option>
+<option>Tad Bun</option>
+<option>Tadbund Bus Stop</option>
+<option>Tadipatri</option>
+<option>Talab Katta</option>
+<option>Tallagada</option>
+<option>TankBund</option>
+<option>Tarnaka Bus Stop</option>
+<option>Teegala Kunta</option>
+<option>Tejaswi Nagar</option>
+<option>Telecom Nagar</option>
+<option>Telephone Bhavan</option>
+<option>Telephone Colony (Kothapet)</option>
+<option>Tellapur</option>
+<option>Temple Alwal</option>
+<option>Tenugudem</option>
+<option>Tharamatipet</option>
+<option>Thatti Annaram</option>
+<option>Thilak Nagar</option>
+<option>Thorrur</option>
+<option>Thumkunta</option>
+<option>Thurakapalli</option>
+<option>Tilaknaar</option>
+<option>Timmapally Bus Stop</option>
+<option>Timmapur</option>
+<option>Tipaiguda</option>
+<option>Tirumalgherry</option>
+<option>Tolichowki Bus Stop</option>
+<option>Tourist</option>
+<option>Tukaram Gate</option>
+<option>Tukkuguda</option>
+<option>Tummalur</option>
+<option>TV Studio</option>
+<option>Tv Tower</option>
+<option>Uday Nagar</option>
+<option>Uddamarri</option>
+<option>Udyog Nagar</option>
+<option>Uppal Bus Stop</option>
+<option>Uppal Depot</option>
+<option>Uppal X Road Bus Stop</option>
+<option>Upparpally X Road</option>
+<option>Upperguda</option>
+<option>Upperpally (Hakimpet)</option>
+<option>Uppuguda</option>
+<option>Urdu Hall</option>
+<option>USB X Road</option>
+<option>Vadigapally</option>
+<option>Vaidehi Nagar</option>
+<option>Vampuguda</option>
+<option>Vanasthalipuram</option>
+<option>Vani Nagar</option>
+<option>Vasanth Nagar Bus Stop</option>
+<option>Vasavi Nagar</option>
+<option>Vattipally</option>
+<option>Vavilala</option>
+<option>Vayas nagar</option>
+<option>Vayupuri</option>
+<option>VBIT (Ascendas IT Park)</option>
+<option>Veldurthi</option>
+<option>Velemela</option>
+<option>Vengal Rao Nagar</option>
+<option>Venkata Reddy Nagar Bus Stop</option>
+<option>Venkatagiri</option>
+<option>Venkatapur Bus Stop</option>
+<option>Venkatapuram Last Bus Stop</option>
+<option>Venkateswara Colony (Hasthinapuram)</option>
+<option>Victory Play ground</option>
+<option>Vidya Nagar Bus Stop</option>
+<option>Vijaya Hospital</option>
+<option>Vijaya Nagar Colony Bus Stop (New Mallepally)</option>
+<option>Vinayak Nagar</option>
+<option>Vittal Rao Nagar</option>
+<option>Vittal Wadi Bus Stop</option>
+<option>Vivek Nagar</option>
+<option>Vivekananda Nagar (Dilsukh Nagar)</option>
+<option>VST Bus Stop</option>
+<option>VV Nagar bustop</option>
+<option>Warasiguda Bus Stop</option>
+<option>Water Tank (Boduppal)</option>
+<option>Water Tank (Bolaram)</option>
+<option>West Marredpally</option>
+<option>West Venkatapuram Last Bus Stop</option>
+<option>White House</option>
+<option>Wipro Campus</option>
+<option>Womens college Bus Stop</option>
+<option>Yacharam (Nagarjuna Sagar Road)</option>
+<option>Yadgiripally</option>
+<option>Yadigirigutta APSRTC Bus Stand</option>
+<option>Yakutpura</option>
+<option>Yamjal</option>
+<option>Yamnampet</option>
+<option>Yamzal x Road</option>
+<option>Yapral Bus Stop</option>
+<option>Yelkaguda</option>
+<option>Yellamma Temple</option>
+<option>Yellampet</option>
+<option>Yellareddy Guda (Kapra)</option>
+<option>Yenkapally</option>
+<option>YMCA (Koti) Bus Stop</option>
+<option>YMCA (Secunderabad)</option>
+<option>Yousufguda basti Bus Stop</option>
+<option>Yousufguda Checkpost</option>
+<option>Ziaguda</option>
+<option>Zinda tili smath Co</option>
+<option>Zoo Park</option>
+<option>ZTS Bus Stop</option>
+	
+
+ 
+                    </datalist>
+                   
+            </section>
+       </div>
+         </span>   
+         <div class="container">
+            <div class="chatbox">
+                <div class="chatbox__support">
+                    <div class="chatbox__header">
+                        <div class="chatbox__image--header">
+                            <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                        </div>
+                        <div class="chatbox__content--header">
+                            <h4 class="chatbox__heading--header">Chat support</h4>
+                            <p class="chatbox__description--header">Hi. My name is Sam. How can I help you?</p>
+                        </div>
+                    </div>
+                    <div class="chatbox__messages">
+                        <div></div>
+                    </div>
+                    <div class="chatbox__footer">
+                        <input type="text" placeholder="Write a message...">
+                        <button class="chatbox__send--footer send__button">Send</button>
+                    </div>
+                </div>
+                <div class="chatbox__button">
+                    <button><img src="chatbox-icon.svg" /></button>
+                </div>
+            </div>
+        </div>
+        
+            <script src="./app.js"></script>
+
+        <script>
+           var sou=document.getElementById("sou");
+				var des=document.getElementById("des");
+
+			function taketicket(){
+				if (sou.value!="" && des.value!=""){
+					document.getElementById("tt2").style.display="block";
+				var mon= document.getElementById("mon");
+				mon.style["display"]="inline-block";
+				mon.style["text-align"]="center";
+				mon.style["padding"]="10px 20px";
+				mon.style["font-size"]="25px";
+				mon.innerHTML="40.Rs";   
+				 document.getElementById("pay").style.display="inline-block";
+				document.getElementById("sub").style.display="none";
+				}
+			
+				else if  (sou.value!="" && des.value==""){
+					
+					alert("Please enter destination location");
+							}
+				else{
+					alert("Please enter source location");
+				}
+			
+		}
+            
+
+        </script>  
+		
+	
+       </body>
+        </html>

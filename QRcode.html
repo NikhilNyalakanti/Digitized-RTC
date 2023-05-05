@@ -1,0 +1,21 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="style.css" >
+    </head>
+    <body>
+        <section id="qrSection">
+            <button id="qrbtn" onclick="generate()" >Tap to generate QR</button></div>
+            <div id="qrcode"></div>
+           
+        </section>
+    </body>
+    <script src="qrcode.min.js" ></script>
+     <script>      
+         var qrcode=new QRCode(document.getElementById('qrcode'),{width:400,height:400}); 
+            function generate(){
+             qrcode.makeCode("Ticket fare: \r\nSource:\r\nDestination:");
+             document.getElementById('qrbtn').style.display='none';
+            }
+     </script>
+
+</html>
